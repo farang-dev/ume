@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 import styles from './AboutSection.module.css';
 
 export default function AboutSection() {
@@ -25,10 +26,12 @@ export default function AboutSection() {
           {/* Photo column */}
           <div className={styles.photoCol}>
             <div className={styles.photoFrame}>
-              <img 
+              <Image 
                 src="/images/artist_profile.png" 
                 alt="Monika Matukaite — Tattoo Artist" 
+                fill
                 className={styles.artistPhoto}
+                sizes="(max-width: 1024px) 100vw, 420px"
               />
               {/* Decorative corner */}
               <div className={styles.cornerTL} aria-hidden="true" />

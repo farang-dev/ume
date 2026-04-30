@@ -159,12 +159,31 @@
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: var(--space-8);
   }
 
   .photoFrame {
+    max-width: 480px; /* Limit size on mobile so it doesn't get massive */
+    margin: 0 auto;
+    aspect-ratio: 3/4; /* Keep original portrait ratio */
+  }
+
+  .textCol {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio p {
     max-width: 100%;
-    aspect-ratio: 4/3;
+  }
+
+  .details {
+    align-items: center;
+    width: 100%;
+  }
+
+  .detailRow {
+    justify-content: center;
   }
 
   .redAccent { display: none; }

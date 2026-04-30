@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -40,7 +41,14 @@ export default function Hero() {
     <section className={styles.hero} id="hero">
       {/* Artist Photo Layer */}
       <div className={styles.heroImage}>
-        <img src="/images/artist_hero.png" alt="Monika Matukaite" />
+        <Image 
+          src="/images/artist_hero.png" 
+          alt="Monika Matukaite" 
+          fill
+          priority
+          className={styles.image}
+          sizes="100vw"
+        />
       </div>
 
       {/* Grain/Noise Overlay */}
