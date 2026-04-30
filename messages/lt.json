@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "gallery": "Tatuiruotės",
+    "artist": "Menininkė",
+    "services": "Informacija",
+    "collections": "Behind-C Collections",
+    "book": "Susisiekite"
+  },
+  "hero": {
+    "tagline": "Tatuiruočių studija",
+    "cta": "Užsisakyti vizitą",
+    "scroll": "Slinkti žemyn"
+  },
+  "gallery": {
+    "title": "Galerija",
+    "viewAll": "Žiūrėti visus darbus"
+  },
+  "about": {
+    "title": "Monika Matukaitė",
+    "label": "Menininkė",
+    "bio": "Monika Matukaitė yra Vilniuje gyvenanti tarpdisciplininė menininkė, kuri specializuojasi ekspresyviame „blackwork“ tatuiravimo stiliuje bei tvarioje, perdirbtoje madoje.\n\nSavo darbuose derindama patirtį Londono mados industrijoje su drąsia, avangardine estetika, ji dėmesį skiria odos ir tekstilės sankirtai. Nesvarbu, ar tai būtų drabužių dekonstravimas žinomiems atlikėjams, ar žmogaus kūno įprasminimas per rašalą, Monikai svarbiausia yra sąmoningumas, tvarumas ir kūno autonomija.",
+    "studio": "Studija",
+    "address": "Miestas",
+    "instagram": "Instagram"
+  },
+  "info": {
+    "title": "Informacija",
+    "hygieneTitle": "Higiena ir saugumas",
+    "hygieneBody": "Naudojame vienkartinę įrangą viskam, kas gali liestis su krauju: adatas, dažus, dangtelius ir pirštines. Nevienkartiniai daiktai dengiami apsauginiais dangalais, keičiamais po kiekvieno naudojimo. Visos atliekos tvarkomos kaip klinikinės atliekos. Naudojame tik aukščiausios kokybės veganiškus ir organiškus dažus.",
+    "pricingTitle": "Dizainas ir kaina",
+    "flashTitle": "Flash dizainai",
+    "flashBody": "Pasirinkite iš mūsų eskizų knygų. Kaina priklauso nuo dizaino; susisiekite dėl detalių.",
+    "customTitle": "Individualūs dizainai",
+    "customBody": "Paprastai nuo 400 € iki 850 €. Kruopščiai apgalvojame balansą ir vietą, todėl patvirtinus galutinį dizainą, paskutinės minutės pakeitimai negalimi. Kaina yra bendra gairė ir priklauso nuo sudėtingumo.",
+    "contact": "Susisiekite dėl papildomos informacijos!"
+  },
+  "booking": {
+    "title": "Kontaktai",
+    "label": "Registruotis vizitui",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram DM",
+    "phone": "+370 600 00000"
+  },
+  "footer": {
+    "rights": "Visos teisės saugomos",
+    "studio": "Tatuiruočių studija · Vilnius"
+  },
+  "meta": {
+    "title": "Monika Matukaite — Tatuiruočių studija Vilniuje",
+    "description": "Subtili ir elegantiška tatuiruočių studija Vilniuje. Monika Matukaite kuria unikalius, minimalius tatuiruočių kūrinius su meile."
+  }
+}

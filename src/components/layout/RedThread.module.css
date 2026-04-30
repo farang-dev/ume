@@ -1,0 +1,32 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  right: 5%;
+  width: 2px;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+  overflow: visible;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100vh;
+  overflow: visible;
+}
+
+.thread {
+  will-change: stroke-dashoffset;
+  transition: stroke-dashoffset 0.05s linear;
+}
+
+/* Hide on mobile for performance */
+@media (max-width: 767px) {
+  .wrapper {
+    display: none;
+  }
+}

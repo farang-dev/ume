@@ -1,0 +1,25 @@
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import RedThread from '@/components/layout/RedThread';
+import Hero from '@/components/sections/Hero';
+import GallerySection from '@/components/sections/GallerySection';
+import AboutSection from '@/components/sections/AboutSection';
+import InfoSection from '@/components/sections/InfoSection';
+import BookingSection from '@/components/sections/BookingSection';
+
+export default function HomePage() {
+  return (
+    <>
+      <RedThread />
+      <Header />
+      <main>
+        <Hero />
+        <GallerySection />
+        <AboutSection />
+        <InfoSection />
+        <BookingSection />
+      </main>
+      <Footer />
+    </>
+  );
+}

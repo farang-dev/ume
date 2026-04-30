@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "gallery": "Tattoos",
+    "artist": "Artist",
+    "services": "Info",
+    "collections": "Behind-C Collections",
+    "book": "Contact"
+  },
+  "hero": {
+    "tagline": "Tattoo Studio",
+    "cta": "Book an Appointment",
+    "scroll": "Scroll down"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "viewAll": "View all works"
+  },
+  "about": {
+    "title": "Monika Matukaitė",
+    "label": "Artist",
+    "bio": "Monika Matukaitė is a Vilnius-based multidisciplinary artist specializing in expressive blackwork tattooing and sustainable, upcycled fashion.\n\nBlending a background in London’s fashion industry with a bold, avant-garde aesthetic, her work focuses on the intersection of skin and textile. Whether deconstructing garments for high-profile performers or reclaiming the human form through ink, Monika prioritizes intentionality, sustainability, and body autonomy.",
+    "studio": "Studio",
+    "address": "Location",
+    "instagram": "Instagram"
+  },
+  "info": {
+    "title": "Information",
+    "hygieneTitle": "Hygiene & Safety",
+    "hygieneBody": "We use disposable equipment for anything that could come into contact with blood during the tattooing process, including needles, ink, caps, and gloves. For non-disposable items, we use protective covers replaced after each use. All waste is handled as clinical waste and is safely disposed of. We only use high-quality, safe, vegan and organic inks.",
+    "pricingTitle": "Design & Pricing",
+    "flashTitle": "Flash Designs",
+    "flashBody": "Select a pre-existing design from our design books. Pricing varies depending on the design; please contact us for more details.",
+    "customTitle": "Custom Designs",
+    "customBody": "Typically range from $450 to $900. Our artists carefully consider overall balance and placement, so once the final design is confirmed, we are unable to make last-minute adjustments. Pricing is a general guideline and varies depending on complexity.",
+    "contact": "Feel free to contact us for more information!"
+  },
+  "booking": {
+    "title": "Contact",
+    "label": "Make an Appointment",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram DM",
+    "phone": "+370 600 00000"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "studio": "Tattoo Studio · Vilnius"
+  },
+  "meta": {
+    "title": "Monika Matukaite — Tattoo Studio in Vilnius",
+    "description": "Chic and minimal tattoo studio in Vilnius. Monika Matukaite creates unique, fine-line tattoo art with precision and care."
+  }
+}
