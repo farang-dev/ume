@@ -6,15 +6,18 @@ import GallerySection from '@/components/sections/GallerySection';
 import AboutSection from '@/components/sections/AboutSection';
 import InfoSection from '@/components/sections/InfoSection';
 import BookingSection from '@/components/sections/BookingSection';
+import { getTattoos } from '@/lib/sanity';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const tattoos = await getTattoos();
+
   return (
     <>
       <RedThread />
       <Header />
       <main>
         <Hero />
-        <GallerySection />
+        <GallerySection initialItems={tattoos} />
         <AboutSection />
         <InfoSection />
         <BookingSection />

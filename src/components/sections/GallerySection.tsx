@@ -27,21 +27,30 @@ const GRADIENT_MAP: Record<string, string> = {
   'geometric': 'linear-gradient(135deg, #151515 0%, #1c1c1c 100%)',
 };
 
-export default function GallerySection() {
+interface GallerySectionProps {
+  initialItems?: any[];
+}
+
+export default function GallerySection({ initialItems }: GallerySectionProps) {
   const t = useTranslations('gallery');
-  const [items, setItems] = useState<any[]>(PLACEHOLDER_ITEMS);
+  const [items, setItems] = useState<any[]>(
+    initialItems && initialItems.length > 0 ? initialItems : PLACEHOLDER_ITEMS
+  );
   const [lightbox, setLightbox] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    async function loadTattoos() {
-      const data = await getTattoos();
-      if (data && data.length > 0) {
-        setItems(data);
+    // Only fetch if we don't have initial items
+    if (!initialItems || initialItems.length === 0) {
+      async function loadTattoos() {
+        const data = await getTattoos();
+        if (data && data.length > 0) {
+          setItems(data);
+        }
       }
+      loadTattoos();
     }
-    loadTattoos();
 
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setVisible(true); },
@@ -49,7 +58,7 @@ export default function GallerySection() {
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [initialItems]);
 
   return (
     <section className={`section ${styles.gallery}`} id="gallery" ref={sectionRef}>
