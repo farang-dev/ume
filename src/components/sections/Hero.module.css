@@ -173,12 +173,13 @@
 
 .headlineSub {
   display: block;
-  font-size: 0.2em;
-  letter-spacing: 0.8em;
-  color: var(--color-ume);
+  font-size: 0.22em;
+  letter-spacing: 0.6em;
+  color: var(--color-text-secondary); /* Improved contrast from dark red */
   font-weight: 400;
-  margin-top: -0.5em;
+  margin-top: -0.4em;
   font-family: var(--font-mono);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 
 
@@ -197,9 +198,11 @@
   }
 
   .headlineSub {
-    font-size: 0.25em;
-    letter-spacing: 0.4em;
-    margin-top: -0.2em;
+    font-size: 0.32em; /* Increased from 0.25em */
+    letter-spacing: 0.35em; /* Reduced from 0.4em for better legibility */
+    margin-top: -0.1em;
+    color: var(--color-text-primary); /* Use white on mobile for maximum visibility */
+    opacity: 0.9;
   }
 
   .logoBg {
