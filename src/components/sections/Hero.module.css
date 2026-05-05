@@ -198,11 +198,11 @@
   }
 
   .headlineSub {
-    font-size: 0.3em; /* Reduced from 0.38em */
-    letter-spacing: 0.15em; /* Tighter for a bolder look */
+    font-size: 0.3em; 
+    letter-spacing: 0.25em; /* Slightly increased for better balance */
     margin-top: -0.1em;
     color: var(--color-ume);
-    font-weight: 700; /* Bold weight */
+    font-weight: 700; 
   }
 
   .logoBg {
