@@ -17,7 +17,7 @@ export default async function HomePage() {
       <Header />
       <main>
         <Hero />
-        <GallerySection initialItems={tattoos} />
+        <GallerySection initialItems={tattoos} limit={12} />
         <AboutSection />
         <InfoSection />
         <BookingSection />

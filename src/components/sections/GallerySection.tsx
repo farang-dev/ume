@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import { Link } from '@/i18n/navigation';
 import styles from './GallerySection.module.css';
 
 import { getTattoos, urlFor } from '@/lib/sanity';
@@ -29,9 +30,10 @@ const GRADIENT_MAP: Record<string, string> = {
 
 interface GallerySectionProps {
   initialItems?: any[];
+  limit?: number;
 }
 
-export default function GallerySection({ initialItems }: GallerySectionProps) {
+export default function GallerySection({ initialItems, limit }: GallerySectionProps) {
   const t = useTranslations('gallery');
   const [items, setItems] = useState<any[]>(
     initialItems && initialItems.length > 0 ? initialItems : PLACEHOLDER_ITEMS
@@ -60,12 +62,15 @@ export default function GallerySection({ initialItems }: GallerySectionProps) {
     return () => observer.disconnect();
   }, [initialItems]);
 
+  const displayItems = limit ? items.slice(0, limit) : items;
+  const showViewAll = limit && items.length > limit;
+
   return (
     <section className={`section ${styles.gallery}`} id="gallery" ref={sectionRef}>
       <div className="container">
         {/* Masonry grid */}
         <div className={styles.masonry}>
-          {items.map((item, i) => {
+          {displayItems.map((item, i) => {
             const isPlaceholder = !item._id;
             const imgSrc = isPlaceholder ? item.src : urlFor(item.image).width(1200).url();
             const aspect = item.aspect || 'square';
@@ -102,6 +107,14 @@ export default function GallerySection({ initialItems }: GallerySectionProps) {
             );
           })}
         </div>
+        
+        {showViewAll && (
+          <div className={styles.viewAllContainer}>
+            <Link href="/tattoos" className="btn btn-primary" style={{ marginTop: '2rem', display: 'inline-block' }}>
+              {t('viewAll')}
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}

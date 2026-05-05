@@ -13,6 +13,15 @@
   padding-top: var(--space-4);
 }
 
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-4);
+  padding-top: var(--space-2);
+}
+
+
 .card {
   position: relative;
   width: 100%;
