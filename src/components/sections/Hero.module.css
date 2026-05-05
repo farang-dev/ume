@@ -175,11 +175,11 @@
   display: block;
   font-size: 0.22em;
   letter-spacing: 0.6em;
-  color: var(--color-text-secondary); /* Improved contrast from dark red */
-  font-weight: 400;
+  color: var(--color-ume); /* Reverted to accent color */
+  font-weight: 500; /* Increased weight for better visibility */
   margin-top: -0.4em;
   font-family: var(--font-mono);
-  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 
@@ -198,16 +198,28 @@
   }
 
   .headlineSub {
-    font-size: 0.32em; /* Increased from 0.25em */
-    letter-spacing: 0.35em; /* Reduced from 0.4em for better legibility */
+    font-size: 0.38em; /* Increased for better visibility with the accent color */
+    letter-spacing: 0.2em; /* Further reduced to make words more readable */
     margin-top: -0.1em;
-    color: var(--color-text-primary); /* Use white on mobile for maximum visibility */
-    opacity: 0.9;
+    color: var(--color-ume); /* Reverted to accent color */
+    font-weight: 500;
   }
 
   .logoBg {
     right: -10%;
     width: 120%;
     opacity: 0.08 !important;
+  }
+
+  .label {
+    font-weight: 500;
+    font-size: 0.85rem; /* Slightly larger for mobile readability */
+    color: var(--color-text-primary); /* Brighter for mobile visibility */
+    opacity: 0.8;
+  }
+
+  .label::before {
+    background: var(--color-ume-light); /* Brighter red for the line on mobile */
+    opacity: 0.8;
   }
 }
