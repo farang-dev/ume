@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { usePathname, useRouter } from '@/i18n/navigation';
+import { usePathname, useRouter, Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { useParams } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
@@ -10,6 +10,10 @@ import styles from './Header.module.css';
 const NAV_LINKS = ['gallery', 'artist', 'services', 'collections'] as const;
 const EXTERNAL_LINKS: Record<string, string> = {
   collections: 'https://www.instagram.com/behind.curtains_/'
+};
+// Nav items that link to a separate page instead of scrolling
+const ROUTE_LINKS: Record<string, string> = {
+  gallery: '/tattoos',
 };
 
 export default function Header() {
@@ -49,13 +53,16 @@ export default function Header() {
       setMenuOpen(false);
       return;
     }
-    
+
     setMenuOpen(false);
     // Map 'artist' link to 'about' section ID
     const sectionId = id === 'artist' ? 'about' : id;
     const el = document.getElementById(sectionId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // Section not on current page — navigate home with hash
+      router.push(`/#${sectionId}`);
     }
   };
 
@@ -66,7 +73,13 @@ export default function Header() {
           {/* Logo */}
           <button
             className={styles.logo}
-            onClick={() => scrollToSection('hero')}
+            onClick={() => {
+              if (pathname === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                router.push('/');
+              }
+            }}
             aria-label="Ume Tattoo"
           >
             <img
@@ -89,6 +102,14 @@ export default function Header() {
                 >
                   {t(key)}
                 </a>
+              ) : ROUTE_LINKS[key] ? (
+                <Link
+                  key={key}
+                  href={ROUTE_LINKS[key]}
+                  className={styles.navLink}
+                >
+                  {t(key)}
+                </Link>
               ) : (
                 <button
                   key={key}
@@ -160,6 +181,17 @@ export default function Header() {
                 <span className={styles.mobileNavNum}>0{i + 1}</span>
                 {t(key)}
               </a>
+            ) : ROUTE_LINKS[key] ? (
+              <Link
+                key={key}
+                href={ROUTE_LINKS[key]}
+                className={styles.mobileNavLink}
+                style={{ transitionDelay: menuOpen ? `${i * 80}ms` : '0ms' }}
+                onClick={() => setMenuOpen(false)}
+              >
+                <span className={styles.mobileNavNum}>0{i + 1}</span>
+                {t(key)}
+              </Link>
             ) : (
               <button
                 key={key}

@@ -63,7 +63,7 @@ export default function GallerySection({ initialItems, limit }: GallerySectionPr
   }, [initialItems]);
 
   const displayItems = limit ? items.slice(0, limit) : items;
-  const showViewAll = limit && items.length > limit;
+  const showViewAll = !!limit;
 
   return (
     <section className={`section ${styles.gallery}`} id="gallery" ref={sectionRef}>
@@ -111,7 +111,7 @@ export default function GallerySection({ initialItems, limit }: GallerySectionPr
         {showViewAll && (
           <div className={styles.viewAllContainer}>
             <Link href="/tattoos" className="btn btn-primary" style={{ marginTop: '2rem', display: 'inline-block' }}>
-              {t('viewAll')}
+              {t('seeAll')}
             </Link>
           </div>
         )}
